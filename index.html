@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aung Pyae Hein - Tailwind Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1D4ED8",
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold text-primary">Aung Pyae Hein</h1>
+        <div class="space-x-4 hidden md:block">
+          <a href="#home" class="hover:underline">Home</a>
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#skills" class="hover:underline">Skills</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+        <button
+          onclick="toggleDarkMode()"
+          class="text-sm px-2 py-1 border rounded dark:border-gray-500"
+        >
+          Dark Mode
+        </button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center">
+      <div
+        class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <img
+          src="./image/my_photo.jpg"
+          alt="Profile"
+          class="w-72 h-72 object-cover rounded-full mx-auto"
+          loading="lazy"
+        />
+        <div>
+          <h1 class="text-3xl font-bold text-primary mb-2">
+            Hello, I'm Aung Pyae Hein
+          </h1>
+          <h2 class="text-xl mb-4">Aspiring Junior Developer</h2>
+          <p class="mb-4">
+            Currently learning HTML, CSS, Bootstrap, JavaScript, Vue, and React.
+            Passionate about clean UI and continuous improvement.
+          </p>
+          <a
+            href="./cv/Aung Pyae Hein - CV.pdf"
+            download
+            class="inline-block px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">About Me</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
+          Aspiring junior developer with foundational skills in HTML, CSS,
+          Bootstrap,Vue.js and React.js gained through hands-on projects and
+          training. Motivated to learn, grow, and contribute in a real-world
+          development environment. Committed to writing clean code and
+          continuously improving my skills.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h3 class="text-xl font-bold">1+ Years</h3>
+            <p>Frontend Experience</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">3+ Projects</h3>
+            <p>Personal & Class Projects</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">A+ Certified</h3>
+            <p>IT Fundamentals</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-900">
+      <div class="max-w-xl mx-auto px-4">
+        <h2 class="text-center text-2xl font-bold mb-8">Skills</h2>
+        <div class="space-y-6">
+          <div>
+            <label>HTML & CSS</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-gray-400 h-full w-[75%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>Bootstrap</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-purple-500 h-full w-[60%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>JavaScript</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-yellow-400 h-full w-[60%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>Vue.js</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-green-400 h-full w-[50%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>React.js</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-cyan-500 h-full w-[40%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>PHP</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-blue-500 h-full w-[60%]"></div>
+            </div>
+          </div>
+          <div>
+            <label>Laravel</label>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
+            >
+              <div class="bg-red-500 h-full w-[70%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-center text-2xl font-bold mb-10">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-100 dark:bg-gray-900 p-4 rounded shadow">
+            <img
+              src="./image/pos_dashboard.PNG"
+              class="w-full h-40 object-cover rounded mb-4"
+              alt="POS"
+            />
+            <h3 class="font-bold text-lg">POS System (Laravel Backend)</h3>
+            <p class="text-sm mb-3">
+              Point of Sale system built during class, backend-focused using
+              Laravel.
+            </p>
+            <button
+              class="bg-gray-400 px-3 py-1 rounded text-white cursor-not-allowed"
+            >
+              View on Github
+            </button>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-900 p-4 rounded shadow">
+            <img
+              src="./image/media_vue.PNG"
+              class="w-full h-40 object-cover rounded mb-4"
+              alt="Vue + Laravel"
+            />
+            <h3 class="font-bold text-lg">Vue + Laravel Mini Project</h3>
+            <p class="text-sm mb-3">
+              A mini project integrating Vue.js frontend with Laravel backend.
+            </p>
+            <button
+              class="bg-gray-400 px-3 py-1 rounded text-white cursor-not-allowed"
+            >
+              View on Github
+            </button>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-900 p-4 rounded shadow">
+            <img
+              src="./image/portfolio.PNG"
+              class="w-full h-40 object-cover rounded mb-4"
+              alt="Portfolio"
+            />
+            <h3 class="font-bold text-lg">Personal Portfolio</h3>
+            <p class="text-sm mb-3">
+              This portfolio site built using Tailwind CSS with dark mode
+              support.
+            </p>
+            <a
+              href="https://github.com/aungpyaeheiin/portfolio"
+              target="_blank"
+              class="inline-block px-4 py-1 bg-blue-600 text-white rounded"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-900">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-center text-2xl font-bold mb-10">Contact Me</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <form class="space-y-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="w-full p-3 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+            />
+            <input
+              type="email"
+              placeholder="your.email@example.com"
+              class="w-full p-3 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+            />
+            <textarea
+              rows="5"
+              placeholder="Your message..."
+              class="w-full p-3 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-primary text-white px-4 py-2 rounded"
+            >
+              Send Message
+            </button>
+          </form>
+          <div class="space-y-4">
+            <div>
+              <strong>Phone:</strong>
+              <p>+95 975 761 8511</p>
+            </div>
+            <div>
+              <strong>Email:</strong>
+              <p>aunggpyaehein@gmail.com</p>
+            </div>
+            <div>
+              <strong>Location:</strong>
+              <p>Yangon, Myanmar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+      &copy; 2025 Aung Pyae Hein. All rights reserved.
+    </footer>
+  </body>
+</html>
