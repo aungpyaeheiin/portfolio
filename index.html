@@ -4,24 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aung Pyae Hein - Tailwind Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1D4ED8",
-            },
-          },
-        },
-      };
-    </script>
-    <script>
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
+    <style>
+      @keyframes gradient-move {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
       }
-    </script>
+      .animate-gradient-move {
+        animation: gradient-move 3s linear infinite;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <!-- Navbar -->
@@ -115,55 +110,75 @@
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-gray-400 h-full w-[75%]"></div>
+              <div
+                class="h-full w-[75%] bg-gradient-to-r from-pink-500 via-yellow-400 to-purple-500 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>Bootstrap</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-purple-500 h-full w-[60%]"></div>
+              <div
+                class="h-full w-[60%] bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>JavaScript</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-yellow-400 h-full w-[60%]"></div>
+              <div
+                class="h-full w-[60%] bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>Vue.js</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-green-400 h-full w-[50%]"></div>
+              <div
+                class="h-full w-[50%] bg-gradient-to-r from-green-300 via-green-500 to-emerald-500 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>React.js</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-cyan-500 h-full w-[40%]"></div>
+              <div
+                class="h-full w-[40%] bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-500 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>PHP</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-blue-500 h-full w-[60%]"></div>
+              <div
+                class="h-full w-[60%] bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-600 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
+
           <div>
             <label>Laravel</label>
             <div
               class="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden"
             >
-              <div class="bg-red-500 h-full w-[70%]"></div>
+              <div
+                class="h-full w-[70%] bg-gradient-to-r from-red-400 via-red-500 to-pink-600 bg-[length:200%] animate-gradient-move"
+              ></div>
             </div>
           </div>
         </div>
@@ -281,4 +296,39 @@
       &copy; 2025 Aung Pyae Hein. All rights reserved.
     </footer>
   </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            "gradient-move": "gradientMove 3s linear infinite",
+          },
+          keyframes: {
+            gradientMove: {
+              "0%": { backgroundPosition: "0% 50%" },
+              "100%": { backgroundPosition: "100% 50%" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1D4ED8",
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
 </html>
